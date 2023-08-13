@@ -206,7 +206,11 @@ nav {
 footer {
   text-align: center;
   background-color: #1f2937;
-  padding: 30px;
+  padding: 10px;
+}
+
+.back {
+  display: block;
 }
 
 @media (max-width: 979px) {
