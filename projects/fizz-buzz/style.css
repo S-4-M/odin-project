@@ -52,3 +52,8 @@ button {
   width: 20px;
   height: 20px;
 }
+
+.back {
+  position: absolute;
+  bottom: 10px;
+}
