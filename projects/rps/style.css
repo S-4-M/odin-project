@@ -2,11 +2,47 @@ header {
   text-align: center;
 }
 
+h1 {
+  font-size: 80px;
+}
+
 .flex-container {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn-container {
+  margin: 40px;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 25px;
+}
+
+#rock {
+  background-image: url("./media/images/rock-svgrepo-com.jpg");
+}
+
+#paper {
+  background-image: url("./media/images/paper-stack-stationery-svgrepo-com.jpg");
+}
+
+#scissors {
+  background-image: url("./media/images/scissors-svgrepo-com.jpg");
 }
 
 button {
-  margin: 10px;
+  height: 300px;
+  min-width: 300px;
+
+  border-radius: 25px;
+  border: none;
+
+  opacity: 0;
+}
+
+button:hover {
+  opacity: 0.3;
 }
