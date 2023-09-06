@@ -1,20 +1,43 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
 header {
   text-align: center;
 }
 
 h1 {
-  font-size: 80px;
+  margin-top: 80px;
+  font-size: clamp(60px, 5vw, 80px);
 }
 
 .flex-container {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.container {
+  height: 80vh;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.column {
+  height: 100%;
+  flex-direction: column;
+}
+
+.warp {
   flex-wrap: wrap;
 }
 
 .btn-container {
-  margin: 40px;
+  margin: 10px;
+
+  width: clamp(100px, 16vw, 300px);
+  height: clamp(100px, 16vw, 300px);
 
   background-size: cover;
   background-position: center;
@@ -35,8 +58,8 @@ h1 {
 }
 
 button {
-  height: 300px;
-  min-width: 300px;
+  width: inherit;
+  height: inherit;
 
   border-radius: 25px;
   border: none;
@@ -53,11 +76,10 @@ button:hover {
 }
 
 .card {
-  width: 550px;
-  height: 300px;
-  margin: 10px;
+  width: clamp(300px, 30vw, 550px);
+  height: 200px;
+  margin: 5px 5px 0 5px;
 
-  /* box-shadow: 0px 0px 5px black; */
   border: solid black 1px;
   border-radius: 25px;
 
@@ -73,20 +95,15 @@ button:hover {
   height: calc(100% - 70px);
 }
 
-.row {
-  height: 100%;
-  flex-direction: column;
-}
-
 .relative {
   position: relative;
+  top: -120px;
 }
 
 #outcome-msg {
   position: absolute;
-  font-size: 340px;
 
-  top: -390px;
+  font-size: clamp(180px, 18vw, 320px);
 }
 
 .hidden {
@@ -102,11 +119,17 @@ button:hover {
   background-color: #db2727;
 }
 
-@media screen and (max-width: 1120px) {
-  #outcome-msg {
-    position: absolute;
-    font-size: 340px;
+@media screen and (max-width: 622px) {
+  h1 {
+    margin-top: 0px;
+  }
 
-    top: -750px;
+  .relative {
+    top: 0;
+  }
+
+  #outcome-msg {
+    height: 458px;
+    top: -450px;
   }
 }

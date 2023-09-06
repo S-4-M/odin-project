@@ -11,47 +11,51 @@
       <h1>Rock Paper Scissors</h1>
     </header>
     <main>
-      <div class="flex-container">
-        <div id="rock" class="btn-container">
-          <button class="btn">rock</button>
-        </div>
-        <div id="paper" class="btn-container">
-          <button class="btn">paper</button>
-        </div>
-        <div id="scissors" class="btn-container">
-          <button class="btn">scissors</button>
-        </div>
-      </div>
-      <div id="scoreboard">
-        <div class="flex-container">
-          <div class="my-container">
-            <div class="card">
-              <div class="card-head">
-                <span>me</span>
+      <div class="container flex-container">
+        <div id="scoreboard">
+          <div class="flex-container warp">
+            <div class="my-container">
+              <div class="card">
+                <div class="card-head">
+                  <span>me</span>
+                </div>
+                <div class="card-body">
+                  <div class="flex-container row">
+                    <span id="my-score">0</span>
+                  </div>
+                </div>
               </div>
-              <div class="card-body">
-                <div class="flex-container row">
-                  <span id="my-score">0</span>
+            </div>
+            <div class="com-container">
+              <div class="card">
+                <div class="card-head">
+                  <span>com</span>
+                </div>
+                <div class="card-body">
+                  <div class="flex-container column">
+                    <span id="com-score">0</span>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="com-container">
-            <div class="card">
-              <div class="card-head">
-                <span>com</span>
-              </div>
-              <div class="card-body">
-                <div class="flex-container row">
-                  <span id="com-score">0</span>
-                </div>
-              </div>
+          <div id="outcome">
+            <div class="flex-container relative">
+              <span id="outcome-msg" class="flex-container hidden"></span>
             </div>
           </div>
         </div>
-        <div id="outcome">
-          <div class="flex-container relative">
-            <span id="outcome-msg" class="hidden"></span>
+        <div id="buttons">
+          <div class="flex-container">
+            <div id="rock" class="btn-container">
+              <button class="btn">rock</button>
+            </div>
+            <div id="paper" class="btn-container">
+              <button class="btn">paper</button>
+            </div>
+            <div id="scissors" class="btn-container">
+              <button class="btn">scissors</button>
+            </div>
           </div>
         </div>
       </div>
