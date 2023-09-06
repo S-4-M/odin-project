@@ -9,6 +9,7 @@ h1 {
 .flex-container {
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
 }
 
@@ -45,4 +46,67 @@ button {
 
 button:hover {
   opacity: 0.3;
+}
+
+#scoreboard {
+  text-align: center;
+}
+
+.card {
+  width: 550px;
+  height: 300px;
+  margin: 10px;
+
+  /* box-shadow: 0px 0px 5px black; */
+  border: solid black 1px;
+  border-radius: 25px;
+
+  font-size: 60px;
+  text-align: center;
+}
+
+.card-head {
+  border-bottom: solid black 1px;
+}
+
+.card-body {
+  height: calc(100% - 70px);
+}
+
+.row {
+  height: 100%;
+  flex-direction: column;
+}
+
+.relative {
+  position: relative;
+}
+
+#outcome-msg {
+  position: absolute;
+  font-size: 340px;
+
+  top: -390px;
+}
+
+.hidden {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.exposed {
+  opacity: 1;
+}
+
+.red {
+  background-color: #b81818;
+}
+
+@media screen and (max-width: 1120px) {
+  #outcome-msg {
+    position: absolute;
+    font-size: 340px;
+
+    top: -750px;
+  }
 }
