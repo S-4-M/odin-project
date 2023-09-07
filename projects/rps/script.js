@@ -3,7 +3,7 @@ const options = ["rock", "paper", "scissors"];
 const myScore = document.querySelector("#my-score");
 const comScore = document.querySelector("#com-score");
 const outcomeMsg = document.querySelector("#outcome-msg");
-let comChoiceElement;
+let comChoiceElement = document.querySelector(`.btn`);
 
 let myCounter = 0;
 let comCounter = 0;
@@ -46,12 +46,14 @@ const shoot = (me, com) => {
 const buttons = document.querySelectorAll(".btn");
 buttons.forEach((button) =>
   button.addEventListener("click", (event) => {
+    comChoiceElement.classList.remove("red");
+
     const result = shoot(event.target.innerText, getComputerChoice());
+
     outcomeMsg.innerText = result;
     outcomeMsg.classList.add("exposed");
     comChoiceElement.classList.add("red");
     setTimeout(() => {
-      comChoiceElement.classList.remove("red");
       outcomeMsg.classList.remove("exposed");
     }, 500);
   })
